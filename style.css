@@ -41,6 +41,10 @@ p {
 	padding: 0;
 }
 
+p {
+	margin-block-end: 1rem;
+}
+
 h1 {
 	margin-block-end: var(--width-heavy);
 	padding-block-end: var(--width-heavy);

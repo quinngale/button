@@ -3,14 +3,15 @@ let agreementRequest = fetch('knights-of-ni.json');
 window.addEventListener('DOMContentLoaded', async e => {
 
     function placeChildRandomly(parentElement, childElement) {
+        let padding = 10
         let width = parentElement.clientWidth;
         let height = parentElement.clientHeight;
 
         let childWidth = childElement.offsetWidth;
         let childHeight = childElement.offsetHeight;
 
-        let positionX = (((width - childWidth) * Math.random())).toFixed(0);
-        let positionY = (((height - childHeight) * Math.random())).toFixed(0);
+        let positionX = (((width - childWidth - padding * 2) * Math.random()) + padding).toFixed(0);
+        let positionY = (((height - childHeight - padding * 2) * Math.random()) + padding).toFixed(0);
 
         childElement.style.top = `${positionY}px`;
         childElement.style.left = `${positionX}px`;
